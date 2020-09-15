@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .Contenedores2{
+  background-image: url('https://www.solofondos.com/wp-content/uploads/2015/12/Fondos-de-madera-1024x640.jpg');
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 5%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+</style>
+<style>
+  /* Remove default bullets */
+  ul, #myUL {
+    list-style-type: none;
+  }
+  
+  /* Remove margins and padding from the parent ul */
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the caret/arrow */
+  .caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Create the caret/arrow with a unicode, and style it */
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+  
+  /* Hide the nested list */
+  .nested {
+    display: none;
+  }
+  
+  /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+  .active {
+    display: block;
+  }
+  </style>
+    <!------------------------------------------ HEADER ----------------------------------------------->
+
+    <header>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/22a4983a09.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href='/css/stylesteel.css'>
+    
+  <script defer type="text/javascript" src='/js/index.js'></script>
+  
+    <title>Práctica 2</title>
+     </header>
+  
+  <body>
+    
+  
+    <div class="Contenedores2">
+      <br>
+            <h2 style="color:white"; >TRADUCTOR</h2>
+            
+            <br />
+            <table border="1">
+              <tr >
+                <td>
+                  <a class="	fa fa-table"></a>
+                </td>
+                <td>
+                <a href="#" class="rainbow-button" alt="Agregar Pestaña" onclick="AgregarP()"></a>
+                </td>
+                <td>
+                  <a class="fa fa-floppy-o"></a>
+                </td>
+                <td>
+                  <a href="#" class="rainbow-button1" alt="Guardar Archivo" onclick="guardar()"></a>
+                </td>
+                <td>
+                  <a class="fa fa-folder-open-o"></a>
+                </td>
+                <td>
+                  <a href="#" class="rainbow-button1" alt="Guardar como" onclick="guardarcomo()"> </a>
+                </td>
+                <td>
+                  <a class="fa fa-file-o"></a>
+                </td>
+                <td>
+                  <a href="#" class="rainbow-button1" alt="Nuevo" onclick="Nuevo()"> </a>
+                </td>
+                <td>
+                  <a class="fa fa-folder-open"></a>
+                </td>
+                <td>
+                  <a href="#" class="rainbow-button1" alt="Abrir(choose files)" ></a>
+                </td>
+                <td>
+                  <input  type="file" id="files" name="files[]" multiple="" onchange="filesInfo()"/>
+                </td>
+              </tr>
+            </table>
+            
+            <ul class="tabs" id="Creacionpestana">
+              <li>
+                <a href="#tab0"><span class="fa fa-file-archive-o"></span><span class="tab-tex">Tab0</span></a>
+              </li>
+              
+          
+            </ul>
+          
+            <div class="secciones" id="botonesdepesta">
+              <article id="tab0">
+                <textarea class="TextoEntrada" id="tab0">hola mundo</textarea>
+              </article>
+              
+            </div>
+            
+            <div class="share">
+              <i class="fa fa-code"></i>
+            </div>
+              <div class="one">
+                <i class="	fa fa-cloud-download" onclick="Reportes()"></i>
+              </div>
+              <div class="two">
+                <i class="fa fa-caret-square-o-right" onclick="Analizar()"></i>
+              </div>
+              <div class="three">
+                <i class="	fa fa-language"></i>
+              </div>
+            <br>
+              <table>
+                <tr>
+                  <td>
+                    <a href="#" class="rainbow-button1" alt="PRINCIPAL(choose files)" ></a>
+                  </td>
+                  <td>
+                    <input  type="file" id="files1" name="files[]" multiple="" onchange="filesInfo1()"/>
+                  </td>
+                </tr>
+              </table>
+            <div class="Phyton_"> 
+              <table class="Tablas">
+                <tr>
+                  <td>
+                    <h3 style="color:rgb(17, 233, 222);"style=" text-align: center;"; >PRINCIPAL</h3>
+                  </td>
+                  <td>
+                    <h3 style="color:rgb(248, 32, 158);"style=" text-align: center;" >Salidas CONSOLA </h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="Phyton_seccion" id="botonesdepesta">
+                      <article id="Mostrar">
+                        <textarea class="TextoEntrada" id="Mostrar">Principal texto</textarea>
+                      </article>
+                    </div>
+                  </td>
+                  <td>
+                    <ul class="tabs1" id="Creacionpestana">
+                      <li>
+                        <a href="#htmls"><span class="fa fa-file-code-o"></span><span class="tab-tex1">CONSOLA</span></a>
+                      </li>
+                      <li>
+                        <a href="#jsonS"><span class="fa fa-cogs"></span><span class="tab-tex1">ERRORES</span></a>
+                      </li>
+                  
+                    </ul>
+                  
+                    <div class="secciones1" id="botonesdepesta">
+                      <article id="htmls">
+                        <textarea class="TextoEntrada" id="HTML_view" disabled="false">hola mundo</textarea>
+                      </article>
+                      <article id="jsonS">
+                        <textarea class="TextoEntrada" id="JSON_view" disabled="false">hola mundo1</textarea>
+                      </article>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="TablaVariables" id="variables">
+              
+            </div>
+            <h3 style="color:rgb(228, 243, 11);"style=" text-align: center;" >ARBOLES DE ANALISIS</h3>
+            <div class="TablaLexico" id="tablitalex">
+              
+            </div>
+              
+            
+            <script>
+            
+    var toggler = document.getElementsByClassName("caret");
+ var i;
+                for (i = 0; i < toggler.length; i++) {
+                  toggler[i].addEventListener("click", function() {
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                  });
+                }
+
+            </script>
+            <div class="TablaErrores" id="errores">
+              <h3 style="color:rgb(243, 11, 119);"style=" text-align: center;" >Tabla de Errores</h3>
+              <table border="1" id="tablitaerr" width=80% Font Face="Comic Sans MS" bgcolor=#AA13F1  >
+                <tr><!--<tr>Coloca en negrita el texto-->
+                  <p align="Left">
+                <div ALIGN=center>
+                    <th>No.</th>
+                    <th>Tipo</th>
+                    <th>Descripcion</th>
+                    <th>Fila</th>
+                    <th>Columna</th>
+                </div>
+                  </p>
+                  </tr>
+              </table>
+            </div>
+            <h3 style="color:rgb(248, 123, 7);"style=" text-align: center;" >Tabla de Errores Archivos</h3>
+            <div class="TablaErroresArchivos" id="tablitaerr12">
+              
+            </div>
+            <div class="TablaCopias" id="copias">
+              
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+               <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+    </div>           
+  
+ 
+</br>
+    
+</body>
+
+</html>
